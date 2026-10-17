@@ -1365,3 +1365,61 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Undergraduate Courses Section
+   ========================================================================== */
+   .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+  }
+  
+  .course-card {
+    background: var(--bg-card-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.95rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: var(--transition);
+  }
+  
+  .course-card:hover {
+    border-color: var(--accent-blue);
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+  }
+  
+  .course-name {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .course-score {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(59, 130, 246, 0.14);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    color: #93c5fd;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.28rem 0.75rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  
+  .course-score.score-top {
+    background: rgba(139, 92, 246, 0.18);
+    border-color: rgba(139, 92, 246, 0.45);
+    color: #c4b5fd;
+  }
+  
+  @media (max-width: 768px) {
+    .courses-grid {
+      grid-template-columns: 1fr;
+    }
+  }
